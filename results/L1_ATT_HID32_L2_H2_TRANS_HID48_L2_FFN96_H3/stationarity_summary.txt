@@ -1,0 +1,52 @@
+==== Summary for Stationarity Tests ====
+
+Results of Dickey-Fuller Test for 1h T:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 1h SWDR:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 1h rh:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 6h T:
+The time series is non-stationary
+
+Results of Dickey-Fuller Test for 6h SWDR:
+The time series is non-stationary
+
+Results of Dickey-Fuller Test for 6h rh:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 24h T:
+The time series is non-stationary
+
+Results of Dickey-Fuller Test for 24h SWDR:
+The time series is non-stationary
+
+Results of Dickey-Fuller Test for 24h rh:
+The time series is stationary
+
+Non-stationarity series that need to be differenced for applying AR models: [('6h', 'T'), ('6h', 'SWDR'), ('24h', 'T'), ('24h', 'SWDR')].
+
+Stationary series that do not need to be differenced for applying AR models: [('1h', 'T'), ('1h', 'SWDR'), ('1h', 'rh'), ('6h', 'rh'), ('24h', 'rh')].
+
+==== Differencing Non-Stationary Series and Re-Testing ====
+
+Results of Dickey-Fuller Test for 6h T:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 6h SWDR:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 24h T:
+The time series is stationary
+
+Results of Dickey-Fuller Test for 24h SWDR:
+The time series is stationary
+
+After differencing:
+
+Still non-stationary: [].
+Now stationary (all): [('1h', 'T'), ('1h', 'SWDR'), ('1h', 'rh'), ('6h', 'rh'), ('24h', 'rh')] + [('6h', 'T'), ('6h', 'SWDR'), ('24h', 'T'), ('24h', 'SWDR')].
+

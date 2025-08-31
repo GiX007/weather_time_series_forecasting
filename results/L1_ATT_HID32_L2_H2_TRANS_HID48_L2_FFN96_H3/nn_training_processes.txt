@@ -1,0 +1,117 @@
+
+>>> Training 1h_T_RNN ...
+Epoch 10/200 | Train: loss=0.0050 | R2=0.9897 | Val: loss=0.0052| R2=0.9712
+Epoch 20/200 | Train: loss=0.0039 | R2=0.9921 | Val: loss=0.0026| R2=0.9855
+Epoch 30/200 | Train: loss=0.0038 | R2=0.9923 | Val: loss=0.0026| R2=0.9856
+Epoch 40/200 | Train: loss=0.0038 | R2=0.9924 | Val: loss=0.0025| R2=0.9857
+Epoch 50/200 | Train: loss=0.0037 | R2=0.9924 | Val: loss=0.0025| R2=0.9858
+Epoch 60/200 | Train: loss=0.0037 | R2=0.9924 | Val: loss=0.0025| R2=0.9858
+Epoch 70/200 | Train: loss=0.0037 | R2=0.9925 | Val: loss=0.0027| R2=0.9848
+
+>>> Training 6h_T_RNN ...
+Epoch 10/200 | Train: loss=0.1217 | R2=0.7582 | Val: loss=0.1084| R2=0.6526
+
+>>> Training 24h_T_RNN ...
+Epoch 10/200 | Train: loss=0.3328 | R2=0.1399 | Val: loss=0.3862| R2=-0.0128
+
+>>> Training 1h_T_RNN_MV ...
+Epoch 10/200 | Train: loss=0.0046 | R2=0.9905 | Val: loss=0.0034| R2=0.9810
+Epoch 20/200 | Train: loss=0.0036 | R2=0.9927 | Val: loss=0.0025| R2=0.9858
+Epoch 30/200 | Train: loss=0.0034 | R2=0.9931 | Val: loss=0.0023| R2=0.9871
+Epoch 40/200 | Train: loss=0.0033 | R2=0.9932 | Val: loss=0.0022| R2=0.9874
+Epoch 50/200 | Train: loss=0.0033 | R2=0.9933 | Val: loss=0.0022| R2=0.9875
+Epoch 60/200 | Train: loss=0.0033 | R2=0.9933 | Val: loss=0.0022| R2=0.9876
+Epoch 70/200 | Train: loss=0.0032 | R2=0.9935 | Val: loss=0.0022| R2=0.9875
+
+>>> Training 6h_T_RNN_MV ...
+Epoch 10/200 | Train: loss=0.1130 | R2=0.7796 | Val: loss=0.1334| R2=0.6294
+Epoch 20/200 | Train: loss=0.1019 | R2=0.8021 | Val: loss=0.1186| R2=0.6761
+Epoch 30/200 | Train: loss=0.0970 | R2=0.8120 | Val: loss=0.1149| R2=0.6923
+Epoch 40/200 | Train: loss=0.0931 | R2=0.8195 | Val: loss=0.1100| R2=0.6968
+Epoch 50/200 | Train: loss=0.0895 | R2=0.8263 | Val: loss=0.1062| R2=0.6965
+Epoch 60/200 | Train: loss=0.0846 | R2=0.8349 | Val: loss=0.0937| R2=0.7137
+Epoch 70/200 | Train: loss=0.0785 | R2=0.8463 | Val: loss=0.0880| R2=0.7277
+Epoch 80/200 | Train: loss=0.0755 | R2=0.8521 | Val: loss=0.0807| R2=0.7424
+Epoch 90/200 | Train: loss=0.0731 | R2=0.8565 | Val: loss=0.0782| R2=0.7497
+Epoch 100/200 | Train: loss=0.0688 | R2=0.8644 | Val: loss=0.0779| R2=0.7477
+
+>>> Training 24h_T_RNN_MV ...
+Epoch 10/200 | Train: loss=0.3323 | R2=0.1645 | Val: loss=0.4051| R2=-0.0397
+
+>>> Training 1h_T_ATT ...
+Epoch 10/200 | Train: loss=0.0118 | R2=0.9759 | Val: loss=0.0413| R2=0.7667
+Epoch 20/200 | Train: loss=0.0066 | R2=0.9865 | Val: loss=0.0052| R2=0.9706
+Epoch 30/200 | Train: loss=0.0055 | R2=0.9887 | Val: loss=0.0043| R2=0.9761
+Epoch 40/200 | Train: loss=0.0052 | R2=0.9894 | Val: loss=0.0042| R2=0.9766
+Epoch 50/200 | Train: loss=0.0050 | R2=0.9898 | Val: loss=0.0039| R2=0.9785
+Epoch 60/200 | Train: loss=0.0048 | R2=0.9901 | Val: loss=0.0037| R2=0.9794
+Epoch 70/200 | Train: loss=0.0046 | R2=0.9905 | Val: loss=0.0036| R2=0.9798
+Epoch 80/200 | Train: loss=0.0045 | R2=0.9907 | Val: loss=0.0036| R2=0.9802
+Epoch 90/200 | Train: loss=0.0044 | R2=0.9910 | Val: loss=0.0034| R2=0.9807
+Epoch 100/200 | Train: loss=0.0045 | R2=0.9908 | Val: loss=0.0034| R2=0.9809
+
+>>> Training 6h_T_ATT ...
+Epoch 10/200 | Train: loss=0.1320 | R2=0.7424 | Val: loss=0.1526| R2=0.5737
+Epoch 20/200 | Train: loss=0.1016 | R2=0.7975 | Val: loss=0.1665| R2=0.5256
+
+>>> Training 24h_T_ATT ...
+Epoch 10/200 | Train: loss=0.3916 | R2=0.0201 | Val: loss=0.3779| R2=0.0050
+Epoch 20/200 | Train: loss=0.3733 | R2=0.0662 | Val: loss=0.4226| R2=-0.0868
+
+>>> Training 1h_T_ATT_MV ...
+Epoch 10/200 | Train: loss=0.0117 | R2=0.9760 | Val: loss=0.0116| R2=0.9352
+Epoch 20/200 | Train: loss=0.0059 | R2=0.9879 | Val: loss=0.0069| R2=0.9602
+Epoch 30/200 | Train: loss=0.0054 | R2=0.9890 | Val: loss=0.0038| R2=0.9785
+Epoch 40/200 | Train: loss=0.0056 | R2=0.9886 | Val: loss=0.0087| R2=0.9499
+
+>>> Training 6h_T_ATT_MV ...
+Epoch 10/200 | Train: loss=0.1347 | R2=0.7365 | Val: loss=0.2059| R2=0.4622
+Epoch 20/200 | Train: loss=0.1373 | R2=0.7286 | Val: loss=0.2042| R2=0.4445
+Epoch 30/200 | Train: loss=0.0765 | R2=0.8483 | Val: loss=0.1346| R2=0.6589
+Epoch 40/200 | Train: loss=0.0699 | R2=0.8616 | Val: loss=0.1274| R2=0.6722
+Epoch 50/200 | Train: loss=0.0903 | R2=0.8199 | Val: loss=0.1234| R2=0.6211
+Epoch 60/200 | Train: loss=0.0585 | R2=0.8840 | Val: loss=0.1004| R2=0.6815
+Epoch 70/200 | Train: loss=0.0530 | R2=0.8953 | Val: loss=0.0929| R2=0.6832
+Epoch 80/200 | Train: loss=0.0499 | R2=0.9018 | Val: loss=0.0905| R2=0.6756
+Epoch 90/200 | Train: loss=0.0462 | R2=0.9090 | Val: loss=0.0895| R2=0.6641
+
+>>> Training 24h_T_ATT_MV ...
+Epoch 10/200 | Train: loss=0.3705 | R2=0.0723 | Val: loss=0.3613| R2=0.0876
+Epoch 20/200 | Train: loss=0.3273 | R2=0.1553 | Val: loss=0.3673| R2=0.0641
+
+>>> Training 1h_T_TRANS ...
+Epoch 10/200 | Train: loss=0.0095 | R2=0.9805 | Val: loss=0.0065| R2=0.9647
+Epoch 20/200 | Train: loss=0.0057 | R2=0.9884 | Val: loss=0.0037| R2=0.9792
+Epoch 30/200 | Train: loss=0.0052 | R2=0.9894 | Val: loss=0.0037| R2=0.9795
+Epoch 40/200 | Train: loss=0.0050 | R2=0.9898 | Val: loss=0.0034| R2=0.9813
+Epoch 50/200 | Train: loss=0.0048 | R2=0.9902 | Val: loss=0.0033| R2=0.9817
+Epoch 60/200 | Train: loss=0.0048 | R2=0.9902 | Val: loss=0.0032| R2=0.9823
+Epoch 70/200 | Train: loss=0.0047 | R2=0.9903 | Val: loss=0.0031| R2=0.9826
+Epoch 80/200 | Train: loss=0.0048 | R2=0.9903 | Val: loss=0.0031| R2=0.9828
+
+>>> Training 6h_T_TRANS ...
+Epoch 10/200 | Train: loss=0.1388 | R2=0.7166 | Val: loss=0.1586| R2=0.4500
+Epoch 20/200 | Train: loss=0.1117 | R2=0.7784 | Val: loss=0.1416| R2=0.5493
+Epoch 30/200 | Train: loss=0.1082 | R2=0.7866 | Val: loss=0.1565| R2=0.4978
+
+>>> Training 24h_T_TRANS ...
+Epoch 10/200 | Train: loss=0.3412 | R2=0.1559 | Val: loss=0.4751| R2=-0.1412
+
+>>> Training 1h_T_TRANS_MV ...
+Epoch 10/200 | Train: loss=0.0094 | R2=0.9808 | Val: loss=0.0194| R2=0.8914
+Epoch 20/200 | Train: loss=0.0082 | R2=0.9833 | Val: loss=0.0087| R2=0.9508
+Epoch 30/200 | Train: loss=0.0056 | R2=0.9887 | Val: loss=0.0037| R2=0.9790
+Epoch 40/200 | Train: loss=0.0053 | R2=0.9892 | Val: loss=0.0033| R2=0.9815
+Epoch 50/200 | Train: loss=0.0051 | R2=0.9896 | Val: loss=0.0033| R2=0.9813
+
+>>> Training 6h_T_TRANS_MV ...
+Epoch 10/200 | Train: loss=0.1301 | R2=0.7391 | Val: loss=0.1738| R2=0.5841
+Epoch 20/200 | Train: loss=0.1060 | R2=0.7900 | Val: loss=0.1500| R2=0.6101
+Epoch 30/200 | Train: loss=0.1003 | R2=0.8028 | Val: loss=0.1300| R2=0.6505
+Epoch 40/200 | Train: loss=0.0909 | R2=0.8198 | Val: loss=0.1048| R2=0.6126
+Epoch 50/200 | Train: loss=0.0759 | R2=0.8487 | Val: loss=0.1006| R2=0.6644
+Epoch 60/200 | Train: loss=0.0835 | R2=0.8331 | Val: loss=0.1252| R2=0.5904
+
+>>> Training 24h_T_TRANS_MV ...
+Epoch 10/200 | Train: loss=0.3479 | R2=0.1431 | Val: loss=0.3541| R2=0.1053
+Epoch 20/200 | Train: loss=0.2778 | R2=0.3057 | Val: loss=0.4441| R2=-0.0446

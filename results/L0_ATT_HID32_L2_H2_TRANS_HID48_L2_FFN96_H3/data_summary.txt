@@ -1,0 +1,253 @@
+==== Weather Forecasting Project ====
+All basic EDA information is logged here.
+
+==== Summary for the Original Dataset ====
+Shape: (52696, 20)
+Columns: Index(['p', 'T', 'Tpot', 'Tdew', 'rh', 'VPmax', 'VPact', 'VPdef', 'sh', 'H2OC',
+       'rho', 'wv', 'max. wv', 'wd', 'rain', 'raining', 'SWDR', 'PAR',
+       'max. PAR', 'Tlog'],
+      dtype='object')
+Index type: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+Index range: index=2020-01-01 00:10:00 → 2021-01-01 00:00:00
+Monotonic index: True
+Duplicate index values: 1
+
+Column dtypes:
+p           float64
+T           float64
+Tpot        float64
+Tdew        float64
+rh          float64
+VPmax       float64
+VPact       float64
+VPdef       float64
+sh          float64
+H2OC        float64
+rho         float64
+wv          float64
+max. wv     float64
+wd          float64
+rain        float64
+raining     float64
+SWDR        float64
+PAR         float64
+max. PAR    float64
+Tlog        float64
+dtype: object
+
+Missing values:
+p           0
+T           0
+Tpot        0
+Tdew        0
+rh          0
+VPmax       0
+VPact       0
+VPdef       0
+sh          0
+H2OC        0
+rho         0
+wv          0
+max. wv     0
+wd          0
+rain        0
+raining     0
+SWDR        0
+PAR         0
+max. PAR    0
+Tlog        0
+dtype: int64
+
+Descriptive statistics:
+                  p             T          Tpot  ...           PAR      max. PAR          Tlog
+count  52696.000000  52696.000000  52696.000000  ...  52696.000000  52696.000000  52696.000000
+mean     989.989233     10.818241    284.796938  ...    259.863438    308.601939     21.515206
+std        9.207149      7.468671      7.616995  ...    422.786515    569.956762      7.790620
+min      955.580000     -6.440000    266.190000  ...      0.000000  -9999.000000      6.900000
+25%      984.800000      4.590000    278.550000  ...      0.000000      0.000000     15.240000
+50%      990.920000     10.230000    284.320000  ...      9.670000     13.120000     20.440000
+75%      995.930000     16.180000    290.260000  ...    366.437500    434.260000     26.822500
+max     1020.070000     34.800000    309.130000  ...   2131.760000   2498.940000     49.090000
+
+[8 rows x 20 columns]
+
+First 5 rows:
+                            p     T    Tpot  Tdew    rh  VPmax  ...  rain  raining  SWDR  PAR  max. PAR   Tlog
+date                                                           ...                                           
+2020-01-01 00:10:00  1008.89  0.71  273.18 -1.33  86.1   6.43  ...   0.0      0.0   0.0  0.0       0.0  11.45
+2020-01-01 00:20:00  1008.76  0.75  273.22 -1.44  85.2   6.45  ...   0.0      0.0   0.0  0.0       0.0  11.51
+2020-01-01 00:30:00  1008.66  0.73  273.21 -1.48  85.1   6.44  ...   0.0      0.0   0.0  0.0       0.0  11.60
+2020-01-01 00:40:00  1008.64  0.37  272.86 -1.64  86.3   6.27  ...   0.0      0.0   0.0  0.0       0.0  11.70
+2020-01-01 00:50:00  1008.61  0.33  272.82 -1.50  87.4   6.26  ...   0.0      0.0   0.0  0.0       0.0  11.81
+
+[5 rows x 20 columns]
+
+==== Summary for the Processed Dataset ====
+Shape: (52695, 3)
+Columns: Index(['T', 'SWDR', 'rh'], dtype='object')
+Index type: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+Index range: index=2020-01-01 00:10:00 → 2021-01-01 00:00:00
+Monotonic index: True
+Duplicate index values: 0
+
+Column dtypes:
+T       float64
+SWDR    float64
+rh      float64
+dtype: object
+
+Missing values:
+T       0
+SWDR    0
+rh      0
+dtype: int64
+
+Descriptive statistics:
+                  T          SWDR            rh
+count  52695.000000  52695.000000  52695.000000
+mean      10.818476    131.332703     72.486683
+std        7.468546    215.737068     19.230165
+min       -6.440000      0.000000     21.160000
+25%        4.590000      0.000000     58.820000
+50%       10.230000      2.820000     75.400000
+75%       16.180000    182.900000     87.900000
+max       34.800000   1115.290000    100.000000
+
+First 5 rows:
+                         T  SWDR    rh
+date                                 
+2020-01-01 00:10:00  0.71   0.0  86.1
+2020-01-01 00:20:00  0.75   0.0  85.2
+2020-01-01 00:30:00  0.73   0.0  85.1
+2020-01-01 00:40:00  0.37   0.0  86.3
+2020-01-01 00:50:00  0.33   0.0  87.4
+
+Dropped 1 rows due to NaNs/duplicates.
+
+==== Resampled Datasets ====
+
+==== Summary for the 1h Dataset ====
+Shape: (8784, 3)
+Columns: Index(['T', 'SWDR', 'rh'], dtype='object')
+Index type: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+Index range: index=2020-01-01 00:00:00 → 2021-01-01 00:00:00
+Monotonic index: True
+Duplicate index values: 0
+
+Column dtypes:
+T       float64
+SWDR    float64
+rh      float64
+dtype: object
+
+Missing values:
+T       0
+SWDR    0
+rh      0
+dtype: int64
+
+Descriptive statistics:
+                 T         SWDR           rh
+count  8784.000000  8784.000000  8784.000000
+mean     10.817722   131.347960    72.486857
+std       7.461094   210.063377    19.152852
+min      -6.176667     0.000000    21.900000
+25%       4.581250     0.000000    58.700000
+50%      10.230833     5.214167    75.409167
+75%      16.172083   188.080833    87.704167
+max      34.286667   928.368333   100.000000
+
+First 5 rows:
+                             T  SWDR         rh
+date                                          
+2020-01-01 00:00:00  0.578000   0.0  86.020000
+2020-01-01 01:00:00  0.141667   0.0  87.600000
+2020-01-01 02:00:00 -0.153333   0.0  88.583333
+2020-01-01 03:00:00 -0.615000   0.0  89.783333
+2020-01-01 04:00:00 -1.416667   0.0  91.500000
+
+Resampling introduced 3 missing values across all columns (all rows with NaNs were removed).
+
+==== Summary for the 6h Dataset ====
+Shape: (1465, 3)
+Columns: Index(['T', 'SWDR', 'rh'], dtype='object')
+Index type: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+Index range: index=2020-01-01 00:00:00 → 2021-01-01 00:00:00
+Monotonic index: True
+Duplicate index values: 0
+
+Column dtypes:
+T       float64
+SWDR    float64
+rh      float64
+dtype: object
+
+Missing values:
+T       0
+SWDR    0
+rh      0
+dtype: int64
+
+Descriptive statistics:
+                 T         SWDR           rh
+count  1465.000000  1465.000000  1465.000000
+mean     10.812694   131.305853    72.492242
+std       7.304328   182.786021    18.045349
+min      -5.008056     0.000000    24.381389
+25%       4.645278     0.093056    59.575556
+50%      10.375833    30.667222    74.872222
+75%      16.205278   204.568889    86.605556
+max      33.527778   700.097778   100.000000
+
+First 5 rows:
+                             T        SWDR         rh
+date                                                
+2020-01-01 00:00:00 -0.645429    0.000000  89.582857
+2020-01-01 06:00:00 -2.175000  111.938333  91.461111
+2020-01-01 12:00:00  2.909167  117.253611  73.938611
+2020-01-01 18:00:00 -2.149167    0.000000  90.822222
+2020-01-02 00:00:00 -4.601944    0.000000  90.966667
+
+Resampling introduced 0 missing values across all columns (all rows with NaNs were removed).
+
+==== Summary for the 24h Dataset ====
+Shape: (367, 3)
+Columns: Index(['T', 'SWDR', 'rh'], dtype='object')
+Index type: <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+Index range: index=2020-01-01 00:00:00 → 2021-01-01 00:00:00
+Monotonic index: True
+Duplicate index values: 0
+
+Column dtypes:
+T       float64
+SWDR    float64
+rh      float64
+dtype: object
+
+Missing values:
+T       0
+SWDR    0
+rh      0
+dtype: int64
+
+Descriptive statistics:
+                T        SWDR          rh
+count  367.000000  367.000000  367.000000
+mean    10.794959  131.003207   72.510106
+std      6.718497   94.265788   13.978751
+min     -2.705417    0.000000   43.658750
+25%      4.836076   46.727222   61.169688
+50%     10.582153   97.954861   72.993194
+75%     16.074028  212.652500   83.360451
+max     26.869375  344.564028  100.000000
+
+First 5 rows:
+                    T       SWDR         rh
+date                                      
+2020-01-01 -0.514196  57.698671  86.429301
+2020-01-02 -1.056319  66.461389  80.206042
+2020-01-03  4.835278  11.569375  81.975000
+2020-01-04  3.784931   8.040208  80.899861
+2020-01-05  2.735000  31.750208  76.422639
+
+Resampling introduced 0 missing values across all columns (all rows with NaNs were removed).

@@ -1,0 +1,551 @@
+==== Splits Summary ====
+
+Series for AR Baseline models:
+
+1h T Time Series
+Length: 8784 | Nulls: 0 | dtype: float64
+Train size: 6148 | Val size: 1318 | Test size: 1318
+
+
+1h SWDR Time Series
+Length: 8784 | Nulls: 0 | dtype: float64
+Train size: 6148 | Val size: 1318 | Test size: 1318
+
+
+1h rh Time Series
+Length: 8784 | Nulls: 0 | dtype: float64
+Train size: 6148 | Val size: 1318 | Test size: 1318
+
+
+6h rh Time Series
+Length: 1465 | Nulls: 0 | dtype: float64
+Train size: 1025 | Val size: 220 | Test size: 220
+
+
+24h rh Time Series
+Length: 367 | Nulls: 0 | dtype: float64
+Train size: 256 | Val size: 55 | Test size: 56
+
+
+6h T Time Series
+Length: 1464 | Nulls: 0 | dtype: float64
+Train size: 1024 | Val size: 220 | Test size: 220
+
+
+6h SWDR Time Series
+Length: 1464 | Nulls: 0 | dtype: float64
+Train size: 1024 | Val size: 220 | Test size: 220
+
+
+24h T Time Series
+Length: 366 | Nulls: 0 | dtype: float64
+Train size: 256 | Val size: 55 | Test size: 55
+
+
+24h SWDR Time Series
+Length: 366 | Nulls: 0 | dtype: float64
+Train size: 256 | Val size: 55 | Test size: 55
+
+
+Normalization summary (MODEL space) for [1h | T] series:
+  min=-2.3548, max=2.8932
+  mean=-0.1506, std=0.9677
+
+Normalization summary (MODEL space) for [6h | T] series:
+  min=-2.0916, max=2.8703
+  mean=-0.0029, std=0.9455
+
+Normalization summary (MODEL space) for [24h | T] series:
+  min=-3.8867, max=2.8039
+  mean=-0.0273, std=0.9714
+
+Normalization summary (MODEL space) for [1h | SWDR] series:
+  min=-0.6924, max=3.3080
+  mean=-0.1264, std=0.9052
+
+Normalization summary (MODEL space) for [6h | SWDR] series:
+  min=-2.5471, max=2.3339
+  mean=-0.0000, std=0.8716
+
+Normalization summary (MODEL space) for [24h | SWDR] series:
+  min=-2.9306, max=3.5248
+  mean=-0.0093, std=0.8641
+
+Normalization summary (MODEL space) for [1h | rh] series:
+  min=-2.4444, max=1.7397
+  mean=0.2657, std=1.0261
+
+Normalization summary (MODEL space) for [6h | rh] series:
+  min=-2.4887, max=1.8726
+  mean=0.2861, std=1.0408
+
+Normalization summary (MODEL space) for [24h | rh] series:
+  min=-1.9142, max=2.6078
+  mean=0.4014, std=1.1220
+
+
+==== Series for NNs (Sequence Generation) ====
+
+Univariate Sequences
+
+[1h | T] window=72, horizon=1:
+  train: X(6076, 72, 1), y(6076,)  val: X(1246, 72, 1), y(1246,)  test: X(1246, 72, 1), y(1246,)
+
+[extra test] [1h | T] window=72, horizon=6:  X(1241, 72, 1), y(1241, 6)
+
+[6h | T] window=28, horizon=1:
+  train: X(996, 28, 1), y(996,)  val: X(192, 28, 1), y(192,)  test: X(192, 28, 1), y(192,)
+
+[extra test] [6h | T] window=28, horizon=4:  X(189, 28, 1), y(189, 4)
+
+[example] first sample of [6h | T] with horizon=1 and window_size=28:
+
+X[0]=[0.3334141969680786, 2.842590808868408, -1.9724925756454468, -1.0445131063461304, 0.4331250786781311, 2.3564581871032715, -1.4042013883590698, -0.9921936392784119, 0.09132672846317291, 1.2014455795288086, -0.956211268901825, -0.30157598853111267, -0.21408423781394958, 1.1948972940444946, -0.9539834856987, 0.12069316953420639, 0.6868916153907776, 0.7313801050186157, -0.04693181812763214, -0.45461899042129517, -0.1188964694738388, 0.8290656805038452, -0.5428533554077148, -0.9536459445953369, -0.08406179398298264, 2.250131368637085, -0.4280204474925995, 0.13777296245098114]
+y[0]=0.1823289394378662
+
+[example] first sample of [6h | T] with horizon=4 and window_size=28:
+
+X[0]=[0.3334141969680786, 2.842590808868408, -1.9724925756454468, -1.0445131063461304, 0.4331250786781311, 2.3564581871032715, -1.4042013883590698, -0.9921936392784119, 0.09132672846317291, 1.2014455795288086, -0.956211268901825, -0.30157598853111267, -0.21408423781394958, 1.1948972940444946, -0.9539834856987, 0.12069316953420639, 0.6868916153907776, 0.7313801050186157, -0.04693181812763214, -0.45461899042129517, -0.1188964694738388, 0.8290656805038452, -0.5428533554077148, -0.9536459445953369, -0.08406179398298264, 2.250131368637085, -0.4280204474925995, 0.13777296245098114]
+y[0]=[0.1823289394378662, 0.905013382434845, -1.1649492979049683, -0.2430456280708313]
+
+[24h | T] window=21, horizon=1:
+  train: X(235, 21, 1), y(235,)  val: X(34, 21, 1), y(34,)  test: X(34, 21, 1), y(34,)
+
+[1h | SWDR] window=72, horizon=1:
+  train: X(6076, 72, 1), y(6076,)  val: X(1246, 72, 1), y(1246,)  test: X(1246, 72, 1), y(1246,)
+
+[extra test] [1h | SWDR] window=72, horizon=6:  X(1241, 72, 1), y(1241, 6)
+
+[6h | SWDR] window=28, horizon=1:
+  train: X(996, 28, 1), y(996,)  val: X(192, 28, 1), y(192,)  test: X(192, 28, 1), y(192,)
+
+[extra test] [6h | SWDR] window=28, horizon=4:  X(189, 28, 1), y(189, 4)
+
+[example] first sample of [6h | SWDR] with horizon=1 and window_size=28:
+
+X[0]=[0.7221734523773193, -0.0441906675696373, -0.6779829859733582, -8.138439255844787e-08, 0.5268592834472656, 0.04009072482585907, -0.566950261592865, -8.138439255844787e-08, 0.49491822719573975, 0.11745292693376541, -0.6123140454292297, 0.00019040460756514221, 0.4928770065307617, 0.09559357911348343, -0.5886808037757874, 0.0017056340584531426, 0.16315549612045288, -0.02400348149240017, -0.14089585840702057, -8.138439255844787e-08, 0.4889027774333954, -0.09722045063972473, -0.39168256521224976, -8.138439255844787e-08, 0.5065584182739258, 0.02692662924528122, -0.5334852933883667, -8.138439255844787e-08]
+y[0]=0.5228947997093201
+
+[example] first sample of [6h | SWDR] with horizon=4 and window_size=28:
+
+X[0]=[0.7221734523773193, -0.0441906675696373, -0.6779829859733582, -8.138439255844787e-08, 0.5268592834472656, 0.04009072482585907, -0.566950261592865, -8.138439255844787e-08, 0.49491822719573975, 0.11745292693376541, -0.6123140454292297, 0.00019040460756514221, 0.4928770065307617, 0.09559357911348343, -0.5886808037757874, 0.0017056340584531426, 0.16315549612045288, -0.02400348149240017, -0.14089585840702057, -8.138439255844787e-08, 0.4889027774333954, -0.09722045063972473, -0.39168256521224976, -8.138439255844787e-08, 0.5065584182739258, 0.02692662924528122, -0.5334852933883667, -8.138439255844787e-08]
+y[0]=[0.5228947997093201, 0.01921086385846138, -0.5421059131622314, -8.138439255844787e-08]
+
+[24h | SWDR] window=21, horizon=1:
+  train: X(235, 21, 1), y(235,)  val: X(34, 21, 1), y(34,)  test: X(34, 21, 1), y(34,)
+
+[1h | rh] window=72, horizon=1:
+  train: X(6076, 72, 1), y(6076,)  val: X(1246, 72, 1), y(1246,)  test: X(1246, 72, 1), y(1246,)
+
+[extra test] [1h | rh] window=72, horizon=6:  X(1241, 72, 1), y(1241, 6)
+
+[6h | rh] window=28, horizon=1:
+  train: X(997, 28, 1), y(997,)  val: X(192, 28, 1), y(192,)  test: X(192, 28, 1), y(192,)
+
+[extra test] [6h | rh] window=28, horizon=4:  X(189, 28, 1), y(189, 4)
+
+[example] first sample of [6h | rh] with horizon=1 and window_size=28:
+
+X[0]=[1.5044094324111938, -0.7107585668563843, 1.265716791152954, 1.8323533535003662, 1.4121781587600708, -0.3393503427505493, 1.362706184387207, 1.8719245195388794, 1.8653560876846313, 1.3052719831466675, 1.8679193258285522, 1.8725653886795044, 1.8121672868728638, 1.0016634464263916, 1.8725653886795044, 1.8688806295394897, 1.563205361366272, 1.1964913606643677, 1.5684922933578491, 1.7737176418304443, 1.3795599937438965, 0.7665594816207886, 1.5601614713668823, 1.8725653886795044, 1.8153713941574097, 0.4681416451931, 1.073772668838501, 1.296460509300232]
+y[0]=1.1192073822021484
+
+[example] first sample of [6h | rh] with horizon=4 and window_size=28:
+
+X[0]=[1.5044094324111938, -0.7107585668563843, 1.265716791152954, 1.8323533535003662, 1.4121781587600708, -0.3393503427505493, 1.362706184387207, 1.8719245195388794, 1.8653560876846313, 1.3052719831466675, 1.8679193258285522, 1.8725653886795044, 1.8121672868728638, 1.0016634464263916, 1.8725653886795044, 1.8688806295394897, 1.563205361366272, 1.1964913606643677, 1.5684922933578491, 1.7737176418304443, 1.3795599937438965, 0.7665594816207886, 1.5601614713668823, 1.8725653886795044, 1.8153713941574097, 0.4681416451931, 1.073772668838501, 1.296460509300232]
+y[0]=[1.1192073822021484, -0.05608813092112541, 1.0052200555801392, 0.6660294532775879]
+
+[24h | rh] window=21, horizon=1:
+  train: X(235, 21, 1), y(235,)  val: X(34, 21, 1), y(34,)  test: X(35, 21, 1), y(35,)
+
+
+Multivariate Sequences
+
+[1h | features X=['SWDR', 'rh', 'T'] | target y=T] window=72, horizon=1:
+  train: X(6076, 72, 3), y(6076,)  val: X(1246, 72, 3), y(1246,)  test: X(1246, 72, 3), y(1246,)
+
+[extra test MV] [1h] window=72, horizon=6:  X(1241, 72, 3), y(1241, 6)
+
+[6h | features X=['SWDR', 'rh', 'T'] | target y=T] window=28, horizon=1:
+  train: X(997, 28, 3), y(997,)  val: X(192, 28, 3), y(192,)  test: X(192, 28, 3), y(192,)
+
+[extra test MV] [6h] window=28, horizon=4:  X(189, 28, 3), y(189, 4)
+
+[example] first sample of [6h] MV with horizon=1 and window_size=28:
+
+X[0]=[[0.7221734523773193, 1.5044094324111938, 0.3334141969680786], [-0.0441906675696373, -0.7107585668563843, 2.842590808868408], [-0.6779829859733582, 1.265716791152954, -1.9724925756454468], [-8.138439255844787e-08, 1.8323533535003662, -1.0445131063461304], [0.5268592834472656, 1.4121781587600708, 0.4331250786781311], [0.04009072482585907, -0.3393503427505493, 2.3564581871032715], [-0.566950261592865, 1.362706184387207, -1.4042013883590698], [-8.138439255844787e-08, 1.8719245195388794, -0.9921936392784119], [0.49491822719573975, 1.8653560876846313, 0.09132672846317291], [0.11745292693376541, 1.3052719831466675, 1.2014455795288086], [-0.6123140454292297, 1.8679193258285522, -0.956211268901825], [0.00019040460756514221, 1.8725653886795044, -0.30157598853111267], [0.4928770065307617, 1.8121672868728638, -0.21408423781394958], [0.09559357911348343, 1.0016634464263916, 1.1948972940444946], [-0.5886808037757874, 1.8725653886795044, -0.9539834856987], [0.0017056340584531426, 1.8688806295394897, 0.12069316953420639], [0.16315549612045288, 1.563205361366272, 0.6868916153907776], [-0.02400348149240017, 1.1964913606643677, 0.7313801050186157], [-0.14089585840702057, 1.5684922933578491, -0.04693181812763214], [-8.138439255844787e-08, 1.7737176418304443, -0.45461899042129517], [0.4889027774333954, 1.3795599937438965, -0.1188964694738388], [-0.09722045063972473, 0.7665594816207886, 0.8290656805038452], [-0.39168256521224976, 1.5601614713668823, -0.5428533554077148], [-8.138439255844787e-08, 1.8725653886795044, -0.9536459445953369], [0.5065584182739258, 1.8153713941574097, -0.08406179398298264], [0.02692662924528122, 0.4681416451931, 2.250131368637085], [-0.5334852933883667, 1.073772668838501, -0.4280204474925995], [-8.138439255844787e-08, 1.296460509300232, 0.13777296245098114]]
+y[0]=0.1823289394378662
+
+[example] first sample of [6h] MV with horizon=4 and window_size=28:
+
+X[0]=[[0.7221734523773193, 1.5044094324111938, 0.3334141969680786], [-0.0441906675696373, -0.7107585668563843, 2.842590808868408], [-0.6779829859733582, 1.265716791152954, -1.9724925756454468], [-8.138439255844787e-08, 1.8323533535003662, -1.0445131063461304], [0.5268592834472656, 1.4121781587600708, 0.4331250786781311], [0.04009072482585907, -0.3393503427505493, 2.3564581871032715], [-0.566950261592865, 1.362706184387207, -1.4042013883590698], [-8.138439255844787e-08, 1.8719245195388794, -0.9921936392784119], [0.49491822719573975, 1.8653560876846313, 0.09132672846317291], [0.11745292693376541, 1.3052719831466675, 1.2014455795288086], [-0.6123140454292297, 1.8679193258285522, -0.956211268901825], [0.00019040460756514221, 1.8725653886795044, -0.30157598853111267], [0.4928770065307617, 1.8121672868728638, -0.21408423781394958], [0.09559357911348343, 1.0016634464263916, 1.1948972940444946], [-0.5886808037757874, 1.8725653886795044, -0.9539834856987], [0.0017056340584531426, 1.8688806295394897, 0.12069316953420639], [0.16315549612045288, 1.563205361366272, 0.6868916153907776], [-0.02400348149240017, 1.1964913606643677, 0.7313801050186157], [-0.14089585840702057, 1.5684922933578491, -0.04693181812763214], [-8.138439255844787e-08, 1.7737176418304443, -0.45461899042129517], [0.4889027774333954, 1.3795599937438965, -0.1188964694738388], [-0.09722045063972473, 0.7665594816207886, 0.8290656805038452], [-0.39168256521224976, 1.5601614713668823, -0.5428533554077148], [-8.138439255844787e-08, 1.8725653886795044, -0.9536459445953369], [0.5065584182739258, 1.8153713941574097, -0.08406179398298264], [0.02692662924528122, 0.4681416451931, 2.250131368637085], [-0.5334852933883667, 1.073772668838501, -0.4280204474925995], [-8.138439255844787e-08, 1.296460509300232, 0.13777296245098114]]
+y[0]=[0.1823289394378662, 0.905013382434845, -1.1649492979049683, -0.2430456280708313]
+
+[24h | features X=['SWDR', 'rh', 'T'] | target y=T] window=21, horizon=1:
+  train: X(236, 21, 3), y(236,)  val: X(35, 21, 3), y(35,)  test: X(35, 21, 3), y(35,)
+
+
+==== Univariate Dataloaders ====
+
+[1h | T] train: X(6076, 72, 1), y(6076,) val: X(1246, 72, 1), y(1246,) test: X(1246, 72, 1), y(1246,)
+[6h | T] train: X(996, 28, 1), y(996,) val: X(192, 28, 1), y(192,) test: X(192, 28, 1), y(192,)
+[24h | T] train: X(235, 21, 1), y(235,) val: X(34, 21, 1), y(34,) test: X(34, 21, 1), y(34,)
+[1h | SWDR] train: X(6076, 72, 1), y(6076,) val: X(1246, 72, 1), y(1246,) test: X(1246, 72, 1), y(1246,)
+[6h | SWDR] train: X(996, 28, 1), y(996,) val: X(192, 28, 1), y(192,) test: X(192, 28, 1), y(192,)
+[24h | SWDR] train: X(235, 21, 1), y(235,) val: X(34, 21, 1), y(34,) test: X(34, 21, 1), y(34,)
+[1h | rh] train: X(6076, 72, 1), y(6076,) val: X(1246, 72, 1), y(1246,) test: X(1246, 72, 1), y(1246,)
+[6h | rh] train: X(997, 28, 1), y(997,) val: X(192, 28, 1), y(192,) test: X(192, 28, 1), y(192,)
+[24h | rh] train: X(235, 21, 1), y(235,) val: X(34, 21, 1), y(34,) test: X(35, 21, 1), y(35,)
+[extra test] [1h | T] horizon=6: X(1241, 72, 1), y(1241, 6)
+[extra test] [6h | T] horizon=4: X(189, 28, 1), y(189, 4)
+[extra test] [1h | SWDR] horizon=6: X(1241, 72, 1), y(1241, 6)
+[extra test] [6h | SWDR] horizon=4: X(189, 28, 1), y(189, 4)
+[extra test] [1h | rh] horizon=6: X(1241, 72, 1), y(1241, 6)
+[extra test] [6h | rh] horizon=4: X(189, 28, 1), y(189, 4)
+
+==== Multivariate Dataloaders ====
+
+[1h MV] train: X(6076, 72, 3), y(6076,) val: X(1246, 72, 3), y(1246,) test: X(1246, 72, 3), y(1246,)
+[6h MV] train: X(997, 28, 3), y(997,) val: X(192, 28, 3), y(192,) test: X(192, 28, 3), y(192,)
+[24h MV] train: X(236, 21, 3), y(236,) val: X(35, 21, 3), y(35,) test: X(35, 21, 3), y(35,)
+[extra test MV] [1h] horizon=6: X(1241, 72, 3), y(1241, 6)
+[extra test MV] [6h] horizon=4: X(189, 28, 3), y(189, 4)
+
+---- Inspecting 1h MV train DataLoader ----
+
+Num batches: 190 of size 32
+Dataset length (samples): 6076
+
+Dataset sample X shape: torch.Size([72, 3])
+Dataset sample y shape: torch.Size([1])
+Example x^(t) (dataset sample X[0]) shape: torch.Size([3])
+Example x^(t) (dataset sample X[0]) value: tensor([-0.6924,  0.9907, -1.4787])
+Example y value: tensor([-0.7958])
+
+First batch X shape: torch.Size([32, 72, 3])
+First batch y shape: torch.Size([32, 1])
+Example x^(t) (batch sample X[0,0]) shape: torch.Size([3])
+Example x^(t) (batch sample X[0,0]) value: tensor([-0.6924,  0.9907, -1.4787])
+Example y value: tensor([-0.7958])
+Tensor dtypes -> X: torch.float32 | y: torch.float32
+
+
+==== processed_data Summary ====
+
+-- resampled: {res: DataFrame} --
+
+container type: <class 'dict'>
+num entries: 3
+keys (resolutions): ['1h', '6h', '24h']
+values (per resolution):
+ [1h] type=<class 'pandas.core.frame.DataFrame'>, shape=(8784, 3), cols=['T', 'SWDR', 'rh']
+ [6h] type=<class 'pandas.core.frame.DataFrame'>, shape=(1465, 3), cols=['T', 'SWDR', 'rh']
+ [24h] type=<class 'pandas.core.frame.DataFrame'>, shape=(367, 3), cols=['T', 'SWDR', 'rh']
+
+-- final_stationary: list[(res, feat)] --
+
+container type: <class 'list'>
+length: 9
+values:
+ ('1h', 'T')
+ ('1h', 'SWDR')
+ ('1h', 'rh')
+ ('6h', 'rh')
+ ('24h', 'rh')
+ ('6h', 'T')
+ ('6h', 'SWDR')
+ ('24h', 'T')
+ ('24h', 'SWDR')
+
+-- stationary_series_data: {(res, feat): pandas.Series} --
+
+container type: <class 'dict'>
+num entries: 9
+keys: [('1h', 'T'), ('1h', 'SWDR'), ('1h', 'rh'), ('6h', 'rh'), ('24h', 'rh'), ('6h', 'T'), ('6h', 'SWDR'), ('24h', 'T'), ('24h', 'SWDR')]
+values:
+ (1h,T): type=<class 'pandas.core.series.Series'>, shape=(8784,), head=
+date
+2020-01-01 00:00:00    0.578000
+2020-01-01 01:00:00    0.141667
+2020-01-01 02:00:00   -0.153333
+2020-01-01 03:00:00   -0.615000
+2020-01-01 04:00:00   -1.416667
+Name: T, dtype: float64
+
+ (1h,SWDR): type=<class 'pandas.core.series.Series'>, shape=(8784,), head=
+date
+2020-01-01 00:00:00    0.0
+2020-01-01 01:00:00    0.0
+2020-01-01 02:00:00    0.0
+2020-01-01 03:00:00    0.0
+2020-01-01 04:00:00    0.0
+Name: SWDR, dtype: float64
+
+ (1h,rh): type=<class 'pandas.core.series.Series'>, shape=(8784,), head=
+date
+2020-01-01 00:00:00    86.020000
+2020-01-01 01:00:00    87.600000
+2020-01-01 02:00:00    88.583333
+2020-01-01 03:00:00    89.783333
+2020-01-01 04:00:00    91.500000
+Name: rh, dtype: float64
+
+ (6h,rh): type=<class 'pandas.core.series.Series'>, shape=(1465,), head=
+date
+2020-01-01 00:00:00    89.582857
+2020-01-01 06:00:00    91.461111
+2020-01-01 12:00:00    73.938611
+2020-01-01 18:00:00    90.822222
+2020-01-02 00:00:00    90.966667
+Freq: 6h, Name: rh, dtype: float64
+
+ (24h,rh): type=<class 'pandas.core.series.Series'>, shape=(367,), head=
+date
+2020-01-01    86.429301
+2020-01-02    80.206042
+2020-01-03    81.975000
+2020-01-04    80.899861
+2020-01-05    76.422639
+Freq: 24h, Name: rh, dtype: float64
+
+ (6h,T): type=<class 'pandas.core.series.Series'>, shape=(1464,), head=
+date
+2020-01-01 06:00:00   -1.529571
+2020-01-01 12:00:00    5.084167
+2020-01-01 18:00:00   -5.058333
+2020-01-02 00:00:00   -2.452778
+2020-01-02 06:00:00    0.633333
+Freq: 6h, Name: T, dtype: float64
+
+ (6h,SWDR): type=<class 'pandas.core.series.Series'>, shape=(1464,), head=
+date
+2020-01-01 06:00:00    111.938333
+2020-01-01 12:00:00      5.315278
+2020-01-01 18:00:00   -117.253611
+2020-01-02 00:00:00      0.000000
+2020-01-02 06:00:00    142.666944
+Freq: 6h, Name: SWDR, dtype: float64
+
+ (24h,T): type=<class 'pandas.core.series.Series'>, shape=(366,), head=
+date
+2020-01-02   -0.542124
+2020-01-03    5.891597
+2020-01-04   -1.050347
+2020-01-05   -1.049931
+2020-01-06   -0.090903
+Freq: 24h, Name: T, dtype: float64
+
+ (24h,SWDR): type=<class 'pandas.core.series.Series'>, shape=(366,), head=
+date
+2020-01-02     8.762718
+2020-01-03   -54.892014
+2020-01-04    -3.529167
+2020-01-05    23.710000
+2020-01-06   -12.638403
+Freq: 24h, Name: SWDR, dtype: float64
+
+
+-- level_splits: {feat: {res: (train_idx, val_idx, test_idx)}} --
+
+container type: <class 'dict'>
+num entries: 3
+keys (features): ['T', 'SWDR', 'rh']
+values (per feature) is another dictionary:
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [T] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1025, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(56, 1) 
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [SWDR] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1025, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(56, 1) 
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [rh] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1025, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(56, 1) 
+
+-- splits_norm: {feat: {res: (train_df, val_df, test_df)}} --
+
+container type: <class 'dict'>
+num entries: 3
+keys (features): ['T', 'SWDR', 'rh']
+values (per feature) is another dictionary:
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [T] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1024, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(55, 1) 
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [SWDR] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1024, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(55, 1) 
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [rh] resolutions: ['1h', '6h', '24h']
+    (1h) train=(6148, 1), val=(1318, 1), test=(1318, 1) 
+    (6h) train=(1025, 1), val=(220, 1), test=(220, 1) 
+    (24h) train=(256, 1), val=(55, 1), test=(56, 1) 
+
+-- scalers: {(res, feat): {'mean': mu, 'std': sd}} --
+
+container type: <class 'dict'>
+num entries: 9
+keys: [('1h', 'T'), ('6h', 'T'), ('24h', 'T'), ('1h', 'SWDR'), ('6h', 'SWDR'), ('24h', 'SWDR'), ('1h', 'rh'), ('6h', 'rh'), ('24h', 'rh')]
+resolutions: ['1h', '24h', '6h']
+features: ['SWDR', 'T', 'rh']
+values:
+ (1h,T): mean=11.979110, std=7.710212
+ (6h,T): mean=0.013665, std=4.114674
+ (24h,T): mean=0.075205, std=2.502483
+ (1h,SWDR): mean=160.688942, std=232.066720
+ (6h,SWDR): mean=0.000021, std=256.653463
+ (24h,SWDR): mean=0.512269, std=71.900555
+ (1h,rh): mean=67.527132, std=18.666235
+ (6h,rh): mean=67.532216, std=17.338665
+ (24h,rh): mean=67.508575, std=12.459330
+
+-- seqs_uni: {feat: {res: (Xtr, ytr, Xval, yval, Xte, yte)}} --
+
+container type: <class 'dict'>
+num entries: {len(seqs_uni)}
+keys (features): ['T', 'SWDR', 'rh']
+values (per feature) is another dictionary:
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [T] resolutions: ['1h', '6h', '24h']
+    (1h) Xtr(6076, 72, 1), ytr(6076,), Xval(1246, 72, 1), yval(1246,), Xte(1246, 72, 1), yte(1246,)
+    (6h) Xtr(996, 28, 1), ytr(996,), Xval(192, 28, 1), yval(192,), Xte(192, 28, 1), yte(192,)
+    (24h) Xtr(235, 21, 1), ytr(235,), Xval(34, 21, 1), yval(34,), Xte(34, 21, 1), yte(34,)
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [SWDR] resolutions: ['1h', '6h', '24h']
+    (1h) Xtr(6076, 72, 1), ytr(6076,), Xval(1246, 72, 1), yval(1246,), Xte(1246, 72, 1), yte(1246,)
+    (6h) Xtr(996, 28, 1), ytr(996,), Xval(192, 28, 1), yval(192,), Xte(192, 28, 1), yte(192,)
+    (24h) Xtr(235, 21, 1), ytr(235,), Xval(34, 21, 1), yval(34,), Xte(34, 21, 1), yte(34,)
+num entries: 3
+keys: ['1h', '6h', '24h']
+ [rh] resolutions: ['1h', '6h', '24h']
+    (1h) Xtr(6076, 72, 1), ytr(6076,), Xval(1246, 72, 1), yval(1246,), Xte(1246, 72, 1), yte(1246,)
+    (6h) Xtr(997, 28, 1), ytr(997,), Xval(192, 28, 1), yval(192,), Xte(192, 28, 1), yte(192,)
+    (24h) Xtr(235, 21, 1), ytr(235,), Xval(34, 21, 1), yval(34,), Xte(35, 21, 1), yte(35,)
+
+-- seqs_uni_test: {(feat, res, horizon): (Xte, yte)} --
+
+container type: <class 'dict'>
+num entries: 6
+keys: [('T', '1h', 6), ('T', '6h', 4), ('SWDR', '1h', 6), ('SWDR', '6h', 4), ('rh', '1h', 6), ('rh', '6h', 4)]
+features: ['SWDR', 'T', 'rh']
+resolutions: ['1h', '6h']
+horizons: [4, 6]
+values:
+ (T,1h,h=6) -> Xte(1241, 72, 1), yte(1241, 6)
+ (T,6h,h=4) -> Xte(189, 28, 1), yte(189, 4)
+ (SWDR,1h,h=6) -> Xte(1241, 72, 1), yte(1241, 6)
+ (SWDR,6h,h=4) -> Xte(189, 28, 1), yte(189, 4)
+ (rh,1h,h=6) -> Xte(1241, 72, 1), yte(1241, 6)
+ (rh,6h,h=4) -> Xte(189, 28, 1), yte(189, 4)
+
+-- seqs_mv: {res: (Xtr, ytr, Xval, yval, Xte, yte)} --
+
+container type: <class 'dict'>
+num entries: 3
+keys (resolutions): ['1h', '6h', '24h']
+values (per resolution):
+ [1h] Xtr(6076, 72, 3), ytr(6076,), Xval(1246, 72, 3), yval(1246,), Xte(1246, 72, 3), yte(1246,)
+ [6h] Xtr(997, 28, 3), ytr(997,), Xval(192, 28, 3), yval(192,), Xte(192, 28, 3), yte(192,)
+ [24h] Xtr(236, 21, 3), ytr(236,), Xval(35, 21, 3), yval(35,), Xte(35, 21, 3), yte(35,)
+
+-- seqs_mv_test: {(res, horizon): (Xte, yte)} --
+
+container type: <class 'dict'>
+num entries: 2
+keys: dict_keys([('1h', 6), ('6h', 4)])
+values:
+ (1h, h=6) -> Xte(1241, 72, 3), yte(1241, 6)
+ (6h, h=4) -> Xte(189, 28, 3), yte(189, 4)
+
+-- uni_loaders: {feat: {res: {'train': DL, 'val': DL, 'test': DL}}} --
+
+container type: <class 'dict'>
+num entries: len(uni_loaders)
+keys (features): ['T', 'SWDR', 'rh']
+values (per feature → resolution → split):
+ [T] resolutions: ['1h', '6h', '24h']
+    (1h) train: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) val: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) test: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (6h) train: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) val: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) test: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (24h) train: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) val: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) test: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+ [SWDR] resolutions: ['1h', '6h', '24h']
+    (1h) train: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) val: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) test: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (6h) train: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) val: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) test: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (24h) train: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) val: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) test: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+ [rh] resolutions: ['1h', '6h', '24h']
+    (1h) train: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) val: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (1h) test: DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 1])
+    (6h) train: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) val: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (6h) test: DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 1])
+    (24h) train: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) val: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+    (24h) test: DataLoader batch Xtorch.Size([32, 21, 1]), ytorch.Size([32, 1])
+
+-- uni_test_loaders: {(feat, res, horizon): DataLoader} --
+
+container type: <class 'dict'>
+num entries: 6
+keys (features): [('T', '1h', 6), ('T', '6h', 4), ('SWDR', '1h', 6), ('SWDR', '6h', 4), ('rh', '1h', 6), ('rh', '6h', 4)]
+values:
+ (T, 1h, h=6) -> DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 6])
+ (T, 6h, h=4) -> DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 4])
+ (SWDR, 1h, h=6) -> DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 6])
+ (SWDR, 6h, h=4) -> DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 4])
+ (rh, 1h, h=6) -> DataLoader batch Xtorch.Size([32, 72, 1]), ytorch.Size([32, 6])
+ (rh, 6h, h=4) -> DataLoader batch Xtorch.Size([32, 28, 1]), ytorch.Size([32, 4])
+
+-- mv_loaders: {res: {'train': DL, 'val': DL, 'test': DL}} --
+
+container type: <class 'dict'>
+num entries: 3
+keys (resolutions): ['1h', '6h', '24h']
+values (per resolution → split):
+ [1h] splits: ['train', 'val', 'test']
+    train: DataLoader batch Xtorch.Size([32, 72, 3]), ytorch.Size([32, 1])
+    val: DataLoader batch Xtorch.Size([32, 72, 3]), ytorch.Size([32, 1])
+    test: DataLoader batch Xtorch.Size([32, 72, 3]), ytorch.Size([32, 1])
+ [6h] splits: ['train', 'val', 'test']
+    train: DataLoader batch Xtorch.Size([32, 28, 3]), ytorch.Size([32, 1])
+    val: DataLoader batch Xtorch.Size([32, 28, 3]), ytorch.Size([32, 1])
+    test: DataLoader batch Xtorch.Size([32, 28, 3]), ytorch.Size([32, 1])
+ [24h] splits: ['train', 'val', 'test']
+    train: DataLoader batch Xtorch.Size([32, 21, 3]), ytorch.Size([32, 1])
+    val: DataLoader batch Xtorch.Size([32, 21, 3]), ytorch.Size([32, 1])
+    test: DataLoader batch Xtorch.Size([32, 21, 3]), ytorch.Size([32, 1])
+
+-- mv_test_loaders: {(res, horizon): DataLoader} --
+
+container type: <class 'dict'>
+num entries: 2
+keys (features): [('1h', 6), ('6h', 4)]
+values:
+ (1h, h=6) -> DataLoader batch Xtorch.Size([32, 72, 3]), ytorch.Size([32, 6])
+ (6h, h=4) -> DataLoader batch Xtorch.Size([32, 28, 3]), ytorch.Size([32, 4])
