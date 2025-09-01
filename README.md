@@ -7,6 +7,7 @@ The goal is to evaluate short and long-term prediction performance across multip
 ## Contents
 
 - `src/` - Core Python code (eda, preprocessing, models)
+- `main.py` - Main script to run the full pipeline
 - `results` - Saved metrics, logs, figures and predictions
 - `requirements.txt` - Dependencies
 - `auxiliary` - Exploratory analysis and model demos with custom and modular implementations
