@@ -17,7 +17,7 @@ The goal is to evaluate short and long-term prediction performance across multip
 Clone the repo and install dependencies:
 
 ```
-git clone https://github.com/GiX007/weather-forecasting.git
+git clone https://github.com/GiX007/weather_time_series_forecasting.git
 cd weather-forecasting
 pip install -r requirements.txt
 ```
