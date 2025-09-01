@@ -23,14 +23,7 @@ pip install -r requirements.txt
 ```
 
 ```
-git clone https://github.com/GiX007/weather_time_series_forecasting.git
-cd weather_time_series_forecasting
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip setuptools wheel
-python3 -m pip install torch torchvision torchaudio
-python3 -m pip install -r requirements.txt
-python3 main.py
+
 ```
 
 ## Quickstart
