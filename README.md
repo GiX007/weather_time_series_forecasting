@@ -18,7 +18,7 @@ Clone the repo and install dependencies:
 
 ```
 git clone https://github.com/GiX007/weather_time_series_forecasting.git
-cd weather-forecasting
+cd weather_time_series_forecasting
 pip install -r requirements.txt
 ```
 
