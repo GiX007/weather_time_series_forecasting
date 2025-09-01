@@ -22,10 +22,6 @@ cd weather_time_series_forecasting
 pip install -r requirements.txt
 ```
 
-```
-
-```
-
 ## Quickstart
 
 Run the entire project (EDA, preprocessing, training and evaluation):
