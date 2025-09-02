@@ -12,6 +12,7 @@ The goal is to evaluate short and long-term prediction performance across multip
 - `requirements.txt` - Dependencies
 - `auxiliary` - Exploratory analysis and model demos with custom and modular implementations
 - `README.md` - Project documentation
+- `technical_report.pdf` - Final report with methods, experiments, and results
 
 ## Installation
 
