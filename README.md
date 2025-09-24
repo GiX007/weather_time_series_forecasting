@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## Quickstart
 
-Run the entire project (EDA, preprocessing, training and evaluation):
+Run the full pipeline (EDA, preprocessing, training and evaluation) with a single command:
 
 ```
 python main.py
